@@ -9,6 +9,8 @@ export class RentalListComponent implements OnInit {
 
   //CREATE ARRAY types any
   // rentals: any[] = [1,2,3,4];
+  //into hmtl side      {{rental}}
+  
   //ARRAY OF OBJECT
   rentals: any[] = [{
     id: 1,
