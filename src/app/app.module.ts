@@ -4,10 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+//FOR NEW COMPONENT
+import { HeaderComponent } from './common/header/header.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //FOR NEW COMPONENT
+    HeaderComponent
   ],
   imports: [
     BrowserModule
