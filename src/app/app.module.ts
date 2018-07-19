@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-//FOR NEW COMPONENT
+//IMPORT NEW COMPONENT
 import { HeaderComponent } from './common/header/header.component';
-import { RentalComponent } from './rental/rental.component';
 import { TempComponent } from './temp/temp.component';
-import { RentalListComponent } from './rental/rental-list/rental-list.component';
-import { RentalListItemComponent } from './rental/rental-list-item/rental-list-item.component';
+import { RentalComponent } from './rental/rental.component';
 
+//IMPORT MODULE
+import { RentalModule } from './rental/rental.module';
 
 
 //ROUTING
@@ -27,17 +27,14 @@ const routes: Routes = [
     AppComponent,
     //FOR NEW COMPONENT
     HeaderComponent,
-    RentalComponent,
-    TempComponent,
-    RentalListComponent,
-    RentalListItemComponent
+    TempComponent
   ],
   imports: [
     //NEW MODULE IMPORT
     RouterModule.forRoot(routes),
-  
+    //RENTAL MODULE
+    RentalModule,
     BrowserModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
