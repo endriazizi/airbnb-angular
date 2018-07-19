@@ -1,5 +1,15 @@
-
 import { NgModule } from '@angular/core';
+//CommonModule  FOR ngFor DIRECTIVES
+import { CommonModule } from '@angular/common';
+/*
+- html side - 
+ngfor is an angular directives and rentals is the array alrady crated in our ts file
+in each iteration we assign current value of the array rentals to the rental variable 
+ 
+          <div class='col-md-3 col-xs-6' *ngfor="let rntal of rentals">
+            <bwm-rental-list-item></bwm-rental-list-item>
+          </div>
+*/
 
 //FOR NEW COMPONENT
 import { RentalComponent } from './rental.component';
@@ -15,7 +25,10 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
         RentalListComponent,
         RentalListItemComponent
     ],
-    imports: []
+    imports: [
+        //IMPORT CommonModule  FOR ngFor DIRECTIVES
+        CommonModule
+    ]
 })
 
 export class RentalModule {}
