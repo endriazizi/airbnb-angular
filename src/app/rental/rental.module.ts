@@ -19,6 +19,8 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
 //IMPORT SERVICE from shared folder
 import { RentalService } from './shared/rental.service';
 
+//import { Rental } from './shared/rental.model';
+
 
 
 //DECORATOR

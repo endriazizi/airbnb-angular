@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//IMPORT DATA MODEL
+import { Rental } from '../shared/rental.model';
 
 @Component({
   selector: 'bwm-rental-list-item',
