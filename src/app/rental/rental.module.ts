@@ -15,11 +15,27 @@ in each iteration we assign current value of the array rentals to the rental var
 import { RentalComponent } from './rental.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
+import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 
 //IMPORT SERVICE from shared folder
 import { RentalService } from './shared/rental.service';
 
 //import { Rental } from './shared/rental.model';
+
+//IMPORT ROUTE FOR REGISTER NEW ROUTE IN THIS COMPONENT
+import { Routes, RouterModule } from '@angular/router';
+
+//ROUTING
+const routes: Routes = [
+    {path: 'rentals', 
+        component: RentalComponent,
+        children: [
+            { path: '', component: RentalListComponent },
+            { path: ':rentalID', component: RentalDetailComponent }
+        ]
+    }
+  ]
+  
 
 
 
@@ -28,11 +44,13 @@ import { RentalService } from './shared/rental.service';
     declarations: [
         RentalComponent,
         RentalListComponent,
-        RentalListItemComponent
+        RentalListItemComponent,
+        RentalDetailComponent
     ],
     imports: [
         //IMPORT CommonModule  FOR ngFor DIRECTIVES
-        CommonModule
+        CommonModule,
+        RouterModule.forChild(routes)
     ],
     providers: [
         //IMPORT SERVICE from shared folder

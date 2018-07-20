@@ -20,6 +20,8 @@ export class RentalListComponent implements OnInit {
     //EMPTY OBJECT
     //RENTAL ARRAY WITHOUT DATA MODEL
     //rentals: any[] = [];
+
+    //1.1 con il punto accediamo all'array Rental
     rentals: Rental[] = [];
 
     //INJECT SERVICE INSIDE THE CONSTRUCTOR
@@ -40,6 +42,9 @@ export class RentalListComponent implements OnInit {
         //WE ARE PECIFING reentals's TYPE: Rental[])
         (rentals: Rental[]) => {
           this.rentals =rentals
+
+          //1.1 con il punto accediamo all'array Rental
+          //this.rentals[0].
 
         },
         (err) => {
