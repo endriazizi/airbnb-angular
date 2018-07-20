@@ -16,6 +16,9 @@ import { RentalComponent } from './rental.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
 
+//IMPORT SERVICE from shared folder
+import { RentalService } from './shared/rental.service';
+
 
 
 //DECORATOR
@@ -28,6 +31,10 @@ import { RentalListItemComponent } from './rental-list-item/rental-list-item.com
     imports: [
         //IMPORT CommonModule  FOR ngFor DIRECTIVES
         CommonModule
+    ],
+    providers: [
+        //IMPORT SERVICE from shared folder
+        RentalService
     ]
 })
 
