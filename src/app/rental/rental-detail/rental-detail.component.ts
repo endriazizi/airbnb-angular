@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class RentalDetailComponent implements OnInit {
 
   currentID: string;
-  constructor( private route: ActivatedRoute) { }
+  constructor( public route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(

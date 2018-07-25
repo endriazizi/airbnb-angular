@@ -65,6 +65,19 @@ export class RentalService {
         dailyRate: 33,
         shared: true,
         createdAt: "24/12/2017"
+    },
+    {
+        id: "5",
+        title: "Central Apartment 4",
+        city: "Berlin",
+        street: "Haupt strasse",
+        category: "house",
+        image: "http://via.placeholder.com/350x250",
+        bedrooms: 9,
+        description: "Very nice apartment",
+        dailyRate: 33,
+        shared: true,
+        createdAt: "24/12/2017"
     }];
 
     //METHOD PUBLIC FOR CALL IT FROM OTHER COMPONENTS
@@ -73,28 +86,35 @@ export class RentalService {
     public getRentals(): Observable<Rental[]> {
         //INSTANCE OF OBSERVABLE
         //rentalObservable:TYPEof OBSERVABLE
+      //  debugger;
         const rentalObservable:Observable<Rental[]> = new Observable((observer)=>{
         //emit some data simulete oure server CALL CALLING SOME ASYNCOUNUS FUNCTION LIKE setTIMOUT
             //SUBSCRIBE CALLBACK SIMULATION SERVER CALL
+         
             setTimeout(()=>{
+              //  debugger;
                 //after 1 s I want to emit some data, to emit rentals array decalared above
                 //and we can do it by calling observer
                 observer.next(this.rentals);
+  
             }, 1000);
 
+            
             setTimeout(()=>{
+            //    debugger;
                 //after 1 s I want to emit some data, to emit rentals array decalared above
                 //and we can do it by calling observer
                 observer.error("I AM ERROR");
             }, 2000);
 
             setTimeout(()=>{
+               // debugger;
                 //after 1 s I want to emit some data, to emit rentals array decalared above
                 //and we can do it by calling observer
                 observer.complete();
             }, 2000);
         });
-
+       // debugger;
         return rentalObservable;
     }
     
